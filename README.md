@@ -21,5 +21,8 @@ PDF 实时预览、在新标签页中打开、下载
 字体文件自动缓存至浏览器 IndexedDB
 可在设置页面管理字体、一键清空数据
 明暗主题切换
+
+
 部署
+
 GitHub Pages: https://lenguyenduongbsue52500-glitch.github.io
