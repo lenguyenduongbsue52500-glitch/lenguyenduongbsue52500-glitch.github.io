@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>终末地公文｜V-NNC修复版</title>
+<title>终末地公文｜特别修复版</title>
 <!-- 替换为 dom -->
 <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more@3.2.0/dist/dom-to-image-more.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
@@ -659,7 +659,7 @@ function render(){
 let currentBlob = null;
 let currentFileName = "";
 
-// 使用 dom-to-image-more toBlob，原生Blob输出
+// 使用 dom-Blob输出
 async function saveImage(){
     const node = document.getElementById("exportDom");
     const blob = await domtoimage.toBlob(node, {quality:1});
@@ -668,7 +668,7 @@ async function saveImage(){
 
 async function openDownloadModal(){
     const node = document.getElementById("exportDom");
-    // 生成Blob，不再使用html2canvas
+    // 生成Blob
     const blob = await domtoimage.toBlob(node, {quality:1});
     currentBlob = blob;
     currentFileName = getFileName();
